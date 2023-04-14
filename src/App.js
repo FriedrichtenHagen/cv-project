@@ -38,17 +38,32 @@ function App() {
       }
     ]
   })
+  const [editMode, setEditMode] = useState(false)
 
+  function handleClick(){
+    let currentMode = editMode
+    currentMode = !currentMode
+    setEditMode(currentMode)
+  }
 
-
-
-
+  let buttonStyle;
+  if(editMode){
+    buttonStyle = "editActive"
+  } else{
+    buttonStyle = "editInactive"
+  }
 
 
   return (
     <div className="App">
-      <LeftPanel cvData={cvData}/>
-      <RightPanel cvData={cvData}/>
+      <button className={buttonStyle} onClick={handleClick}>edit</button>
+      <LeftPanel 
+        cvData={cvData}
+        setCvData={setCvData} 
+        editMode={editMode}
+        setEditMode={setEditMode}
+        />
+      <RightPanel cvData={cvData} editMode={editMode}/>
     </div>
   );
 }

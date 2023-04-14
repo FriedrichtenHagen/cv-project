@@ -1,7 +1,7 @@
 export default function RightPanel({cvData}){
     const workExperience = cvData.workExperience.map(position => {
         return(
-            <div className="position"> 
+            <div className="position" key={crypto.randomUUID()}> 
                 {position.years}
                 <h3>{position.position}</h3>
                 <p>{position.company}</p>
