@@ -22,27 +22,40 @@ export default function LeftPanel({cvData, setCvData, editMode, setEditMode}){
     }
 
 
-
     if(editMode){
         return(
             <div className="LeftPanel">
             <img src={cvData.image} className="headshot" alt="asdfa"></img>
 
-            <div class="name">
+            <div class="titleRow">
                 <input className="firstName" defaultValue={cvData.firstName} onChange={(e) => {handleInputChange(e)}}></input>
                 <input className="lastName" defaultValue={cvData.lastName} onChange={(e) => {handleInputChange(e)}}></input>
             </div>
+            <div class="row">
+                <input className="title" defaultValue={cvData.title} onChange={(e) => {handleInputChange(e)}}></input>
+            </div>
 
-            <input className="title" defaultValue={cvData.title} onChange={(e) => {handleInputChange(e)}}></input>
+            <div class="titleRow">
+                Contacts
+            </div>
+            <div class="row">
+                <div className="phoneNumber" >{cvData.contacts.phoneNumber}</div>
+            </div>
+            <div class="row">
+                <div className="email" >{cvData.contacts.email}</div>
+            </div>
+            <div class="row">
+                <div className="address" >{cvData.contacts.address}</div>
+            </div>
 
-            <h2>Contacts</h2>
-            <div className="phoneNumber" >{cvData.contacts.phoneNumber}</div>
-            <div className="email" >{cvData.contacts.email}</div>
-            <div className="address" >{cvData.contacts.address}</div>
-            <h2>Skills</h2>
-            <ul>
-                {skills}
-            </ul>
+            <div class="titleRow">
+                Skills
+            </div>
+            <div class="row">
+                <ul>
+                    {skills}
+                </ul>
+            </div>
         </div>
         )
     }
@@ -50,21 +63,36 @@ export default function LeftPanel({cvData, setCvData, editMode, setEditMode}){
         <div className="LeftPanel">
             <img src={cvData.image} className="headshot" alt="asdfa"></img>
 
-            <div class="name">
+            <div class="titleRow">
                 <div className='firstName' onClick={handleTextClick}>{cvData.firstName}</div>
                 <div className="lastName">{cvData.lastName}</div>
             </div>
+            <div class="row">
+                <div className='title'>{cvData.title}</div>
+            </div>
 
-            <div className='title'>{cvData.title}</div>
+            <div class="titleRow">
+                Contacts
+            </div>
+            <div class="row">
+                <div className="phoneNumber" >{cvData.contacts.phoneNumber}</div>
+            </div>
+            <div class="row">
+                <div className="email" >{cvData.contacts.email}</div>
+            </div>
+            <div class="row">
+                <div className="address" >{cvData.contacts.address}</div>
+            </div>
 
-            <h2>Contacts</h2>
-            <div className="phoneNumber" >{cvData.contacts.phoneNumber}</div>
-            <div className="email" >{cvData.contacts.email}</div>
-            <div className="address" >{cvData.contacts.address}</div>
-            <h2>Skills</h2>
-            <ul>
-                {skills}
-            </ul>
+            <div class="titleRow">
+                Skills
+            </div>
+            <div class="row">
+                <ul>
+                    {skills}
+                </ul>
+            </div>
         </div>
     )
 }
+
