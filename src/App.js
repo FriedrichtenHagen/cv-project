@@ -9,11 +9,9 @@ function App() {
     firstName:  "Friedrich",
     lastName: "ten Hagen", 
     title: "Web developer", 
-    contacts: {
-      phoneNumber: "015734758073",
-      email: `fried@test.de`,
-      address: `Bebstreet, Munich`,
-    },
+    phoneNumber: "015734758073",
+    email: `fried@test.de`,
+    address: `Bebstreet, Munich`,
     skills: [`running`, `walking`, `eating`, `sleeping`, `studying javascript and react`],
     profile: ``, 
     workExperience: [
@@ -46,6 +44,7 @@ function App() {
     setEditMode(currentMode)
   }
 
+  // toggle the edit button
   let buttonStyle;
   if(editMode){
     buttonStyle = "editActive"

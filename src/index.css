@@ -33,13 +33,11 @@ body {
 .headshot{
   height: 200px;
   width: auto;
+  padding: 5px;
 }
 .RightPanel{
   width: 100%;
 
-}
-.firstName,.lastName{
-  font-weight: bold;
 }
 ul{
   list-style: none;
@@ -61,21 +59,14 @@ button.editInactive{
   background-color: red;
 
 }
-.firstName, .lastName{
-
-
-
-  font-weight: bold;
-  font-size: large;
-  margin: 0px;
-  
-}
 input{
   text-align: center;
   outline: none;
   border: 0px;
   background-color: var(--left-panel-color);
+  max-width: 300px;
 }
+
 .row, input{
   font-size:medium;
   margin: 0px;
@@ -83,6 +74,16 @@ input{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+}
+.titleRow{
+  font-weight: bold;
+  font-size: large;
+  margin-top: 15px;
+  margin-bottom: 2px;
+}
+.firstName, .lastName{
+  font-weight: bold;
+  font-size: large;
 }
 .name{
   max-width: 90%;
